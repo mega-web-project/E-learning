@@ -1,0 +1,142 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #0e111a;
+  color: #f6f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app-shell {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  color: #9ea5bb;
+}
+
+.stats-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 1.25rem 0;
+}
+
+.stat-card,
+.create-form,
+.course-item {
+  border: 1px solid #2a324b;
+  background: #141b2d;
+  border-radius: 12px;
+}
+
+.stat-card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-card span {
+  color: #95a0bf;
+}
+
+.layout-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 320px 1fr;
+}
+
+.create-form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  height: fit-content;
+}
+
+input,
+select,
+button {
+  border-radius: 8px;
+  border: 1px solid #344069;
+  background: #0f1422;
+  color: inherit;
+  padding: 0.6rem 0.75rem;
+}
+
+button {
+  cursor: pointer;
+  background: #3046d3;
+  border-color: #3046d3;
+}
+
+button.danger {
+  background: #7f2347;
+  border-color: #7f2347;
+}
+
+.course-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.course-item {
+  padding: 0.85rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.course-item.highlight {
+  border-color: #58d4a6;
+  box-shadow: 0 0 0 1px #58d4a6 inset;
+}
+
+.course-item.pending {
+  opacity: 0.75;
+}
+
+.course-item h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.course-item p {
+  margin: 0.3rem 0 0;
+  color: #9ea5bb;
+}
+
+.actions {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.error-banner {
+  font-size: 0.9rem;
+  color: #ff9fba;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .layout-grid {
+    grid-template-columns: 1fr;
+  }
+}
